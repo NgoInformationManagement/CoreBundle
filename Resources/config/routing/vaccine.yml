@@ -1,0 +1,33 @@
+nim_api_vaccine_index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: nim.controller.vaccine:indexAction
+        _sylius:
+            paginate: $limit
+            sortable: $sorting
+            filterable: $criteria
+
+nim_api_vaccine_create:
+    pattern: /new
+    methods: [GET, POST]
+    defaults:
+        _controller: nim.controller.vaccine:createAction
+
+nim_api_vaccine_update:
+    pattern: /{id}/edit
+    methods: [GET, POST]
+    defaults:
+        _controller: nim.controller.vaccine:updateAction
+
+nim_api_vaccine_show:
+    pattern: /{id}
+    methods: [GET]
+    defaults:
+        _controller: nim.controller.vaccine:showAction
+
+nim_api_vaccine_delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: nim.controller.vaccine:deleteAction

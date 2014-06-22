@@ -1,0 +1,15 @@
+nim_api_mission:
+    resource: @NIMCoreBundle/Resources/config/routing/mission.yml
+    prefix: /mission
+
+nim_api_agency:
+    resource: @NIMCoreBundle/Resources/config/routing/agency.yml
+    prefix: /agency
+
+nim_api_worker:
+    resource: @NIMCoreBundle/Resources/config/routing/worker.yml
+    prefix: /worker
+
+nim_api_vaccine:
+    resource: @NIMCoreBundle/Resources/config/routing/vaccine.yml
+    prefix: /vaccine

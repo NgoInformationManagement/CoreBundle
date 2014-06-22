@@ -1,0 +1,4 @@
+NIM\CoreBundle\Model\Mission:
+    properties:
+        workers:
+            exclude: true

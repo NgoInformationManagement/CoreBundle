@@ -1,0 +1,33 @@
+nim_api_worker_index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: nim.controller.worker:indexAction
+        _sylius:
+            paginate: $limit
+            sortable: $sorting
+            filterable: $criteria
+
+nim_api_worker_create:
+    pattern: /new
+    methods: [GET, POST]
+    defaults:
+        _controller: nim.controller.worker:createAction
+
+nim_api_worker_update:
+    pattern: /{id}/edit
+    methods: [GET, POST]
+    defaults:
+        _controller: nim.controller.worker:updateAction
+
+nim_api_worker_show:
+    pattern: /{id}
+    methods: [GET]
+    defaults:
+        _controller: nim.controller.worker:showAction
+
+nim_api_worker_delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: nim.controller.worker:deleteAction
